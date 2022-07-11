@@ -22,47 +22,55 @@ const AuthorsList = () => {
   }, []);
 
   return (
-    <div className="container">
-      {isLoading && <p>Loading..</p>}
-      <table className="table table-striped table-hover mt-5">
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>Image</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone</th>
-            <th>Description</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          {allAuthors &&
-            allAuthors.map((allData, index) => (
-              <tr key={index}>
-                <td>{index + 1}</td>
-                <td>
-                  {/* <img
-                    src={allData.avatar.file.url}
-                    alt={allData.avatar.title}
-                  /> */}
-                  <Avatar
-                    size="100"
-                    facebook-id="invalidfacebookusername"
-                    alt={allData.avatar.title}
-                    src={allData.avatar.file.url}
-                    round="20px"
-                  />
-                </td>
-                <td>{allData.name}</td>
-                <td>{allData.email}</td>
-                <td>{allData.phone}</td>
-                <td>{allData.description}</td>
-              </tr>
-            ))}
-        </tbody>
-      </table>
-    </div>
+    <>
+      <div className="container">
+        {isLoading && <p>Loading..</p>}
+        <h1
+          style={{
+            color: '#e85f09',
+            fontSize: 25,
+            fontFamily: 'sans-sarif',
+            textAlign: 'center',
+          }}
+        >
+          React App Using Contentful Api
+        </h1>
+        <table className="table table-striped table-hover mt-5">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Description</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {allAuthors &&
+              allAuthors.map((allData, index) => (
+                <tr key={index}>
+                  <td>{index + 1}</td>
+                  <td>
+                    <Avatar
+                      size="100"
+                      facebook-id="invalidfacebookusername"
+                      alt={allData.avatar.title}
+                      src={allData.avatar.file.url}
+                      round="20px"
+                    />
+                  </td>
+                  <td>{allData.name}</td>
+                  <td>{allData.email}</td>
+                  <td>{allData.phone}</td>
+                  <td>{allData.description}</td>
+                </tr>
+              ))}
+          </tbody>
+        </table>
+      </div>
+    </>
   );
 };
 
