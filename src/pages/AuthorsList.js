@@ -31,6 +31,7 @@ const AuthorsList = () => {
             fontSize: 25,
             fontFamily: 'sans-sarif',
             textAlign: 'center',
+            marginTop: 20,
           }}
         >
           React App Using Contentful Api
