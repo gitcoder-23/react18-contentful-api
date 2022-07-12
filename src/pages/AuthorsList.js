@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Avatar from 'react-avatar';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import useContentful from '../useContentful';
 
 const AuthorsList = () => {
   const { getAuthors } = useContentful();
+  const navigate = useNavigate();
   const [allAuthors, setAllAuthors] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -12,7 +14,7 @@ const AuthorsList = () => {
     getAuthors()
       .then((response) => {
         setIsLoading(false);
-        console.log('response->', response.sanitizeEntries);
+        // console.log('response->', response.sanitizeEntries);
         setAllAuthors(response.sanitizeEntries);
       })
       .catch((err) => {
@@ -20,6 +22,15 @@ const AuthorsList = () => {
         console.log(err);
       });
   }, []);
+
+  const viewClick = (allData, id) => {
+    navigate(`/author/view/${allData.phone}`, {
+      state: { authorData: allData },
+    });
+    // navigate(`/author/view`, {
+    //   state: { authorData: allData },
+    // });
+  };
 
   return (
     <>
@@ -45,7 +56,7 @@ const AuthorsList = () => {
               <th>Email</th>
               <th>Phone</th>
               <th>Description</th>
-              <th></th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -66,6 +77,12 @@ const AuthorsList = () => {
                   <td>{allData.email}</td>
                   <td>{allData.phone}</td>
                   <td>{allData.description}</td>
+                  <td>
+                    {/* <Link to={`/author/view/${allData.phone}`}>View</Link> */}
+                    <button type="button" onClick={() => viewClick(allData)}>
+                      View
+                    </button>
+                  </td>
                 </tr>
               ))}
           </tbody>
