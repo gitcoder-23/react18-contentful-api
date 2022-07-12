@@ -1,12 +1,21 @@
 import { createClient } from 'contentful';
 
 const useContentful = () => {
+  let preview = false;
   const client = createClient({
-    space: 're181t9ltost',
-    accessToken: 'Q6oImuk50FR2y9hU_7xKHsIeEA8scfLgYy_7-Ex0h60', // for dev
+    // space: process.env.REACT_APP_CONTENTFUL_SPACE,
+    // accessToken: 'Q6oImuk50FR2y9hU_7xKHsIeEA8scfLgYy_7-Ex0h60', // for dev
     // accessToken: '_oXEAIKIG9D-fUh2RMx_ZqRs3wkvHntNPvTixEOHmgI', // for production "Delivery"
-    host: 'preview.contentful.com', // if use "preview" token
+    // host: 'preview.contentful.com', // if use "preview" token
     // host: 'cdn.contentful.com', // if use "Delivery" token
+    space: process.env.REACT_APP_CONTENTFUL_SPACE,
+    accessToken: preview
+      ? process.env.REACT_APP_CONTENTFUL_PREVIEW_TOKEN
+      : process.env.REACT_APP_CONTENTFUL_TOKEN,
+    environment: process.env.REACT_APP_CONTENTFUL_ENV,
+    host: preview
+      ? process.env.REACT_APP_PREVIEW_URL
+      : process.env.REACT_APP_DELIVERY_URL,
   });
 
   const getAuthors = async () => {
