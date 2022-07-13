@@ -1,12 +1,13 @@
 
 // Contentful CMS with React Hooks Crash Course
 https://youtu.be/AWie7zwAyU0
+https://youtube.com/playlist?list=PLAaQpb7XfX3C61IkyRfLcPLtE3b9RSPQY (used)
+
 
 https://www.contentful.com/developers/docs/tutorials/cli/config-management/
 
 https://www.contentful.com/developers/docs/tutorials/cli/
 
-https://youtube.com/playlist?list=PLAaQpb7XfX3C61IkyRfLcPLtE3b9RSPQY (used)
 
 // import & export
 https://www.contentful.com/developers/docs/tutorials/cli/import-and-export/
@@ -26,7 +27,8 @@ https://unsplash.com/
 
 https://www.npmjs.com/package/react-contentful
 
-// contentfulhttps://youtu.be/OS4ZedT111s
+// contentful 
+https://youtu.be/OS4ZedT111s
 
 https://github.com/contentful/contentful.js
 https://github.com/contentful/create-contentful-extension
@@ -40,6 +42,11 @@ https://www.contentful.com/developers/docs/javascript/tutorials/create-expressjs
 
 // gatsby
 https://www.contentful.com/r/knowledgebase/gatsbyjs-and-contentful-in-five-minutes/
+
+
+
+// Image croping
+https://www.contentful.com/developers/docs/references/images-api/#/reference/resizing-&-cropping
 
 
 // Import & export
