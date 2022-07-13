@@ -44,6 +44,10 @@ https://www.contentful.com/r/knowledgebase/gatsbyjs-and-contentful-in-five-minut
 
 // Import & export
 after all authentication
+CLI--
+contentful space use (check all spaces)
+CLI--
+contentful space export --h (specific space id)
 CLI----
 contentful space export
 
