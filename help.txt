@@ -2,6 +2,21 @@
 // Contentful CMS with React Hooks Crash Course
 https://youtu.be/AWie7zwAyU0
 
+https://www.contentful.com/developers/docs/tutorials/cli/config-management/
+
+https://www.contentful.com/developers/docs/tutorials/cli/
+
+https://youtube.com/playlist?list=PLAaQpb7XfX3C61IkyRfLcPLtE3b9RSPQY (used)
+
+// import & export
+https://www.contentful.com/developers/docs/tutorials/cli/import-and-export/
+
+// Authentication
+https://www.contentful.com/developers/docs/references/content-delivery-api/#/introduction/authentication
+
+// Create App
+https://www.contentful.com/developers/docs/extensibility/app-framework/create-contentful-app/
+
 
 https://youtu.be/PB5RQk5gAdQ
 
@@ -12,3 +27,29 @@ https://unsplash.com/
 https://www.npmjs.com/package/react-contentful
 
 // contentfulhttps://youtu.be/OS4ZedT111s
+
+https://github.com/contentful/contentful.js
+https://github.com/contentful/create-contentful-extension
+
+
+// git boilerplate
+https://github.com/contentful/boilerplate-javascript
+
+https://www.contentful.com/developers/docs/javascript/tutorials/create-expressjs-app-using-contentful/
+
+
+// gatsby
+https://www.contentful.com/r/knowledgebase/gatsbyjs-and-contentful-in-five-minutes/
+
+
+// Import & export
+after all authentication
+CLI----
+contentful space export
+
+CLI---
+contentful space import  --content-file="author-db.json"
+
+
+
+
