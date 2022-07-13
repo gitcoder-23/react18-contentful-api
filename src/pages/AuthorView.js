@@ -27,7 +27,8 @@ const AuthorView = () => {
         >
           <div className="col-md-4">
             <img
-              src={authorData?.avatar?.file?.url}
+              // src={`${authorData?.avatar?.file?.url}?fit=pad&w=500&h=500`}
+              src={`${authorData?.avatar?.file?.url}`}
               className="img-fluid rounded-start"
               alt={authorData?.avatar?.title}
             />
