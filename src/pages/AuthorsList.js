@@ -14,7 +14,7 @@ const AuthorsList = () => {
     getAuthors()
       .then((response) => {
         setIsLoading(false);
-        // console.log('response->', response.sanitizeEntries);
+        console.log('response->', response.sanitizeEntries);
         setAllAuthors(response.sanitizeEntries);
       })
       .catch((err) => {
