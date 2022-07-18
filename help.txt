@@ -65,3 +65,6 @@ contentful space import  --content-file="author-db.json"
 https://codepen.io/ganeshraju/pen/PXgYOz
 
 
+// Graphql & Contentfulhttps://youtube.com/playlist?list=PL2dKqfImstaRbjzzirbBfv9W2kycaKjvs
+
+// create contentful apphttps://www.contentful.com/developers/docs/extensibility/app-framework/tutorial/?utm_source=webapp&utm_medium=use-customer-editors-available-items&utm_campaign=in-app-help
