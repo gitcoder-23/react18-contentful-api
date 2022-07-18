@@ -65,6 +65,22 @@ contentful space import  --content-file="author-db.json"
 https://codepen.io/ganeshraju/pen/PXgYOz
 
 
-// Graphql & Contentfulhttps://youtube.com/playlist?list=PL2dKqfImstaRbjzzirbBfv9W2kycaKjvs
+// Graphql & Contentful
+https://youtube.com/playlist?list=PL2dKqfImstaRbjzzirbBfv9W2kycaKjvs
 
-// create contentful apphttps://www.contentful.com/developers/docs/extensibility/app-framework/tutorial/?utm_source=webapp&utm_medium=use-customer-editors-available-items&utm_campaign=in-app-help
+// create contentful app
+https://www.contentful.com/developers/docs/extensibility/app-framework/tutorial/?utm_source=webapp&utm_medium=use-customer-editors-available-items&utm_campaign=in-app-help
+
+
+
+// authorized youtube
+https://youtube.com/playlist?list=PLAaQpb7XfX3BkRC5LUscTOz8ub9GL0v5Q
+
+https://www.contentful.com/developers/docs/references/graphql/
+
+to open graphiql
+https://graphql.contentful.com/content/v1/spaces/{SPACE}/explore?access_token={CDA_TOKEN}
+
+
+https://graphql.contentful.com/content/v1/spaces/ur53vvcipt43/explore?access_token=pNdIiHgcvwRwwznr_uiDt5nkl6jyja1Wc3VZGJG7o5Q
+
