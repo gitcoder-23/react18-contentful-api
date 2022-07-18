@@ -84,10 +84,22 @@ const AuthorsList = () => {
                   <td>{allData.email}</td>
                   <td>{allData.phone}</td>
                   <td>{allData.description}</td>
-                  <td>
+                  <td className="col-2">
                     {/* <Link to={`/author/view/${allData.phone}`}>View</Link> */}
-                    <button type="button" onClick={() => viewClick(allData)}>
+                    <button
+                      type="button"
+                      className="btn btn-info"
+                      style={{ marginRight: 6 }}
+                      onClick={() => viewClick(allData)}
+                    >
                       View
+                    </button>
+                    <button
+                      type="button"
+                      className="btn btn-danger"
+                      onClick={() => viewClick(allData)}
+                    >
+                      Delete
                     </button>
                   </td>
                 </tr>
