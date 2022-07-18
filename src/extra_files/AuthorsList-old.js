@@ -12,24 +12,15 @@ const AuthorsList = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    console.log('client->', client);
-    client
-      .getEntries({ content_type: 'posts' })
-      .then((authorDatas) => {
-        const sanitizeEntries = authorDatas.items.map((item, indx) => {
-          const avatar = item?.fields?.avatar?.fields;
-          return {
-            ...item?.fields,
-            avatar,
-            id: indx,
-          };
-        });
-
-        console.log('sanitizeEntries->', sanitizeEntries);
-        setAllAuthors(sanitizeEntries);
+    getAuthors()
+      .then((response) => {
+        setIsLoading(false);
+        console.log('response->', response.sanitizeEntries);
+        setAllAuthors(response.sanitizeEntries);
       })
       .catch((err) => {
-        console.log('err->', err);
+        setIsLoading(false);
+        console.log(err);
       });
   }, []);
 
@@ -49,16 +40,6 @@ const AuthorsList = () => {
       // if (existingUser) {
       //   return allAuthors.filter((user) => user.id !== id);
       // }
-      axios
-        .delete(
-          `https://cdn.contentful.com/spaces/re181t9ltost/environments/master/entries?content_type=posts/${id}`
-        )
-        .then((delRes) => {
-          console.log('delRes->', delRes);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
     }
   };
 
@@ -77,13 +58,13 @@ const AuthorsList = () => {
         >
           React App Using Contentful Api
         </h1>
-        {/* <button
+        <button
           type="button"
           className="btn btn-primary"
           onClick={() => navigate('/author/create')}
         >
           Add Author
-        </button> */}
+        </button>
         <table className="table table-striped table-hover mt-5">
           <thead>
             <tr>
@@ -115,6 +96,7 @@ const AuthorsList = () => {
                   <td>{allData.phone}</td>
                   <td>{allData.description}</td>
                   <td className="col-2">
+                    {/* <Link to={`/author/view/${allData.phone}`}>View</Link> */}
                     <button
                       type="button"
                       className="btn btn-info"
@@ -123,13 +105,13 @@ const AuthorsList = () => {
                     >
                       View
                     </button>
-                    {/* <button
+                    <button
                       type="button"
                       className="btn btn-danger"
                       onClick={() => deleteClick(allData.id)}
                     >
                       Delete
-                    </button> */}
+                    </button>
                   </td>
                 </tr>
               ))}
