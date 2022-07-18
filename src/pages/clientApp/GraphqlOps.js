@@ -36,6 +36,10 @@ const query = `query{
 }`;
 
 const GraphqlOps = () => {
+  const {
+    REACT_APP_CONTENTFUL_SPACE_CLIENT,
+    REACT_APP_CONTENTFUL_DELIVERY_TOKEN_CLIENT,
+  } = process.env;
   const navigate = useNavigate();
   const [homeBanner, setHomeBanner] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -59,7 +63,7 @@ const GraphqlOps = () => {
     const body = { query };
     axios
       .post(
-        `https://graphql.contentful.com/content/v1/spaces/ur53vvcipt43/?access_token=pNdIiHgcvwRwwznr_uiDt5nkl6jyja1Wc3VZGJG7o5Q`,
+        `https://graphql.contentful.com/content/v1/spaces/${REACT_APP_CONTENTFUL_SPACE_CLIENT}/?access_token=${REACT_APP_CONTENTFUL_DELIVERY_TOKEN_CLIENT}`,
         body
       )
       .then((getDatas) => console.log('getDatas->', getDatas))
