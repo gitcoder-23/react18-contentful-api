@@ -47,6 +47,13 @@ const AuthorsList = () => {
         >
           React App Using Contentful Api
         </h1>
+        <button
+          type="button"
+          class="btn btn-primary"
+          onClick={() => navigate('/author/create')}
+        >
+          Add Author
+        </button>
         <table className="table table-striped table-hover mt-5">
           <thead>
             <tr>
