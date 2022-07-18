@@ -73,7 +73,7 @@ https://www.contentful.com/developers/docs/extensibility/app-framework/tutorial/
 
 
 
-// authorized youtube
+// authorized youtube from contentful
 https://youtube.com/playlist?list=PLAaQpb7XfX3BkRC5LUscTOz8ub9GL0v5Q
 
 https://www.contentful.com/developers/docs/references/graphql/

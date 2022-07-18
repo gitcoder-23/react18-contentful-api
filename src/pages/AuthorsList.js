@@ -79,13 +79,13 @@ const AuthorsList = () => {
         >
           React App Using Contentful Api
         </h1>
-        {/* <button
+        <button
           type="button"
-          className="btn btn-primary"
-          onClick={() => navigate('/author/create')}
+          className="btn btn-primary mx-4"
+          onClick={() => navigate('/graphql/ops')}
         >
-          Add Author
-        </button> */}
+          GraphqlOps
+        </button>
         <button
           type="button"
           className="btn btn-primary"
