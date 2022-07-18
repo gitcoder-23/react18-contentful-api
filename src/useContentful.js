@@ -1,10 +1,10 @@
 import { createClient } from 'contentful';
 
-const useContentful = () => {
+export const useContentful = () => {
   let preview = false;
   const client = createClient({
     space: process.env.REACT_APP_CONTENTFUL_SPACE,
-    accessToken: process.env.REACT_APP_CONTENTFUL_TOKEN, // for production "Delivery"
+    accessToken: process.env.REACT_APP_CONTENTFUL_DELIVERY_TOKEN, // for production "Delivery"
     // host: 'preview.contentful.com', // if use "preview" token
     host: process.env.REACT_APP_DELIVERY_URL, // if use "Delivery" token
   });
@@ -33,4 +33,12 @@ const useContentful = () => {
   return { getAuthors, client };
 };
 
-export default useContentful;
+export const useContentfulClient = () => {
+  const clientData = createClient({
+    space: process.env.REACT_APP_CONTENTFUL_SPACE_CLIENT,
+    accessToken: process.env.REACT_APP_CONTENTFUL_DELIVERY_TOKEN_CLIENT,
+    host: process.env.REACT_APP_DELIVERY_URL_CLIENT,
+  });
+
+  return { clientData };
+};

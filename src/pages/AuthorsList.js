@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import Avatar from 'react-avatar';
 import { useNavigate, useLocation, Link } from 'react-router-dom';
-import useContentful from '../useContentful';
+import { useContentful } from '../useContentful';
 
 const AuthorsList = () => {
   const { getAuthors, client } = useContentful();
@@ -16,6 +16,7 @@ const AuthorsList = () => {
     client
       .getEntries({ content_type: 'posts' })
       .then((authorDatas) => {
+        setIsLoading(false);
         const sanitizeEntries = authorDatas.items.map((item, indx) => {
           const avatar = item?.fields?.avatar?.fields;
           return {
@@ -29,6 +30,7 @@ const AuthorsList = () => {
         setAllAuthors(sanitizeEntries);
       })
       .catch((err) => {
+        setIsLoading(false);
         console.log('err->', err);
       });
   }, []);
@@ -84,6 +86,13 @@ const AuthorsList = () => {
         >
           Add Author
         </button> */}
+        <button
+          type="button"
+          className="btn btn-primary"
+          onClick={() => navigate('/home')}
+        >
+          Home Client
+        </button>
         <table className="table table-striped table-hover mt-5">
           <thead>
             <tr>
